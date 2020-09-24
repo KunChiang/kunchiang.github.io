@@ -1,2 +1,4 @@
 theme: jekyll-theme-architect
 title: Welcome to Kun Chiang's Homepage!
+include:
+      README.md
