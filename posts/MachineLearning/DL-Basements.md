@@ -96,51 +96,51 @@ https://blog.csdn.net/weixin_43835911/article/details/89294613
 
 分类损失函数：
 - Hinge Loss/多分类 SVM 损失：
-$$
+```math
 max(0, 1-y_if(x_i))
-$$
+```
 - 交叉熵损失函数/LR损失/对数损失：
-$$
+```math
 - \frac{1}{N} \sum_i^n y_i log f(x_i) + (1-y_i) log (1-f(x_i))
-$$
+```
 
 
 其他：
 - 指数损失函数（AdaBoost用）：
-$$
+```math
 \frac{1}{n}\sum exp(-y_if(x_i))
-$$
+```
 
 ## Softmax
 
 将输入值映射到（0,1）区间，而这些值的和为1
 
-$$
+```math
 \frac{exp(x_i)}{\sum_j^n exp(x_j)}
-$$
+```
 
 # 优化方法
 
 ## 优化方法“归一化”
 
 1. 计算梯度
-$$
+```math
 g_t = \nabla f(w_t)
-$$
+```
 2. 计算动量
-$$
+```math
 m_t = \phi(g_1, g_2, ..., g_t)
 
 v_t = \psi(g_1, g_2, ..., g_t)
-$$
+```
 3. 梯度下降
-$$
+```math
 \eta_t = \alpha \cdot m_t/\sqrt v_t
-$$
+```
 4. 参数更新
-$$
+```math
 w_t = w_{t-1} - \eta_t
-$$
+```
 
 ## 梯度下降优化方法
 - 标准梯度下降：沿着梯度下降方向不断更新模型参数，最小化代价函数
